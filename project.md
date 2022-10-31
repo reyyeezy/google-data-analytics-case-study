@@ -165,15 +165,13 @@ Supporting visualizations and key findings.
 ```
 user_vs_time <- ggplot(user_averages) +
   geom_col(mapping=aes(x=member_casual, y=mean_time, fill=member_casual))
-  labs(x="Member vs Casual distribution", title="Averages of ride times between users in minutes")
+  labs(x="Member vs Casual distribution", y="Average Time", title="Averages of ride times between users in minutes")
 user_vs_time
 
 user_vs_distance <- ggplot(user_averages) +
   geom_col(mapping=aes(x=member_casual, y=mean_distance, fill=member_casual))+
   labs(x="Member vs Casual", y="Average Distance", title="Averages of Ride Distance between users")
 user_vs_distance
-
-
 
 user_vs_weekday <- ggplot(tripdata, mapping=aes(weekday, fill=member_casual)) +
   geom_bar() + 
@@ -194,15 +192,18 @@ user_vs_rideable_type <- ggplot(tripdata, mapping=aes(rideable_type, fill=member
 user_vs_rideable_type
 
 ```
+Analysis:
+
+We can see that annual members have more preference to use classic bikes when compared to casual riders.
 
 ## Phase 6: Act
 My top 3 recommendations based on my analysis.
 
-1.
-2.
-3.
+1. Since casual riders tend to use the bikes over the course of the weekend, creating a campaign that shows different case uses throughout the week to create a more consistent use of the service.
+2. Adjusting the service so that the longer you use the bike it can be cheaper as an annual member rather than a day-rider.
+3. Creating summer promotions when bike-riding is at it's peak.
 
 ## Conclusion
-
+Thank you for coming along my first data analysis project. As I'm sure there is much to improve on, I've learned a lot with this first course and am excited to continue building on my skills. Feel free to use, comment, critique this notebook. Thanks again!
  
  
